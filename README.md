@@ -1,5 +1,6 @@
 # blog
 
-杂文:
-1. [手写轮播图](./store/case/Carousel)
+Articles:
+* [手写轮播图](./store/case/carousel)
+* [手写一个Vue](./store/case/myVue)
     

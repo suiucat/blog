@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue框架的基本原理</title>
+</head>
+<body>
+  <div id="root">
+    <hr />
+    1、实现双向绑定:
+    <div>测试"{{}}"语法：</div>
+    <div>{{author.name.firstName}}</div>
+    <hr />
+
+    2、实现 v-model:
+    <div>
+      <input type="text" v-model="number"/> number:<span>{{number}}</span>
+    </div>
+    <hr />
+
+    3、计算属性:
+    <span>{{myName}}</span>
+    <span>{{total}}</span>
+    <hr />
+    4、watch:
+    <span>{{current}}</span>
+    <hr />
+    5、点击事件:
+    <div>{{title}}</div>
+    <button v-on:click="clickBtn">点击跑得快</button>
+    <button v-on:click="handlerClick">清除文字</button>
+    <hr />
+  </div>
+  <script src="./myVue.js"></script>
+  <script>
+    const vm = new Vue({
+      el: '#root',
+      data: {
+          title: '两只老虎跑得快,',
+          author: {
+            name: {
+              firstName: 'suiu',
+              secondName: 'ijk',
+            },
+          },
+          number: 1,
+          double: 2,
+          current: 1,
+      },
+      watch: {
+        current() {
+          console.log('current被修改了');
+        },
+      },
+      computed: {
+        myName() {
+          return this.author.name.firstName + this.author.name.secondName;
+        },
+        total() {
+          return this.number + this.double;
+        }
+      },
+      methods: {
+        clickBtn() {
+          this.title += this.title;
+          if (this.title === '') {
+            this.title = '两只老虎跑得快,';
+          }
+        },
+        handlerClick() {
+          this.title = '';
+        }
+      }
+    })
+    window.vm = vm;
+    // let val = 1;
+    // setInterval(() => {
+    //   vm.author.name.firstName = val++;
+    // }, 1000);
+  </script>
+</body>
+</html>
