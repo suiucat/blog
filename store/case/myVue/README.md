@@ -1,5 +1,5 @@
-# 实现一个my Vue
-本文讲的Vue框架的MVVM基本原理,一步一步实现一个简版的Vue，以求深入了解Vue2.x,在开始之前，希望你有使用Vue2.x的经历。
+# 实现一个MVVM框架
+本文讲的是MVVM框架基本实现,一步一步实现一个简版的MVVM，以求深入理解,在开始之前，希望你有使用Vue2.x的经历。
 
 1、让我们从最初的想法开始
   >总所周知，Vue2.x体现的MVVM模式实现是借用了[Object.defineproperty()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)和观察者模式来实现的。
@@ -285,7 +285,6 @@ index.js
   ```
 看到这里，可能代码有点多，但是权衡之下，我还是要这样写，因为我想一步一步讲实现思路，便于读者更好理解。
 
-流程图:
 
 
 
