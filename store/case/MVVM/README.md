@@ -93,7 +93,7 @@ html:
 </head>
 <body>
   <div id="root">
-    <div>{{author.name.firstName}}</div>
+    <div>{{author.firstName}}</div>
   <div>
   <script src="index.js"></script>
 </body>
