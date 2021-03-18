@@ -65,7 +65,7 @@
   数据变化时视图也要变化。比如现在有视图
   ```html
   <div id="root">
-    <div>{{author.name.firstName}}</div>
+    <div>{{author.firstName}}</div>
   <div>
   ```
 有数据对象
